@@ -36,3 +36,6 @@ C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-wi
 C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.pdb
 C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.genruntimeconfig.cache
 C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\ref\CollegeInformationSystem.dll
+C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.Dashboard.resources
+C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.ReportGeneration.resources
+C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.ResetPassword.resources
