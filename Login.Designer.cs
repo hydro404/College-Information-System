@@ -28,167 +28,170 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
-            picturebox_wave = new PictureBox();
-            login_label = new Label();
-            email_label = new Label();
-            password_label = new Label();
-            email = new RichTextBox();
-            password = new RichTextBox();
-            login_btn = new Button();
-            reset_password_link = new LinkLabel();
-            register_link = new LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picturebox_wave).BeginInit();
-            SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.picturebox_wave = new System.Windows.Forms.PictureBox();
+            this.login_label = new System.Windows.Forms.Label();
+            this.email_label = new System.Windows.Forms.Label();
+            this.password_label = new System.Windows.Forms.Label();
+            this.email = new System.Windows.Forms.RichTextBox();
+            this.login_btn = new System.Windows.Forms.Button();
+            this.reset_password_link = new System.Windows.Forms.LinkLabel();
+            this.register_link = new System.Windows.Forms.LinkLabel();
+            this.password = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox_wave)).BeginInit();
+            this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.svgviewer_png_output;
-            pictureBox1.Location = new Point(-5, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(500, 116);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Image = global::CollegeInformationSystem.Properties.Resources.svgviewer_png_output;
+            this.pictureBox1.Location = new System.Drawing.Point(-5, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(500, 116);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 23);
-            label1.TabIndex = 0;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
             // 
             // picturebox_wave
             // 
-            picturebox_wave.Image = Properties.Resources.svgviewer_png_output;
-            picturebox_wave.Location = new Point(-4, -14);
-            picturebox_wave.Name = "picturebox_wave";
-            picturebox_wave.Size = new Size(502, 90);
-            picturebox_wave.TabIndex = 0;
-            picturebox_wave.TabStop = false;
+            this.picturebox_wave.Image = global::CollegeInformationSystem.Properties.Resources.svgviewer_png_output;
+            this.picturebox_wave.Location = new System.Drawing.Point(-4, -14);
+            this.picturebox_wave.Name = "picturebox_wave";
+            this.picturebox_wave.Size = new System.Drawing.Size(502, 90);
+            this.picturebox_wave.TabIndex = 0;
+            this.picturebox_wave.TabStop = false;
             // 
             // login_label
             // 
-            login_label.AutoSize = true;
-            login_label.Font = new Font("SansSerif", 24.75F, FontStyle.Bold, GraphicsUnit.Point);
-            login_label.Location = new Point(201, 104);
-            login_label.Name = "login_label";
-            login_label.Size = new Size(106, 38);
-            login_label.TabIndex = 1;
-            login_label.Text = "Login";
-            login_label.Click += label2_Click;
+            this.login_label.AutoSize = true;
+            this.login_label.Font = new System.Drawing.Font("Sans Serif Collection", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.login_label.Location = new System.Drawing.Point(191, 115);
+            this.login_label.Name = "login_label";
+            this.login_label.Size = new System.Drawing.Size(116, 56);
+            this.login_label.TabIndex = 1;
+            this.login_label.Text = "Login";
+            this.login_label.Click += new System.EventHandler(this.label2_Click);
             // 
             // email_label
             // 
-            email_label.AutoSize = true;
-            email_label.Font = new Font("SansSerif", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            email_label.Location = new Point(90, 185);
-            email_label.Name = "email_label";
-            email_label.Size = new Size(134, 21);
-            email_label.TabIndex = 2;
-            email_label.Text = "  Email address";
+            this.email_label.AutoSize = true;
+            this.email_label.Font = new System.Drawing.Font("Sans Serif Collection", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.email_label.Location = new System.Drawing.Point(90, 205);
+            this.email_label.Name = "email_label";
+            this.email_label.Size = new System.Drawing.Size(153, 32);
+            this.email_label.TabIndex = 2;
+            this.email_label.Text = "  Email address";
             // 
             // password_label
             // 
-            password_label.AutoSize = true;
-            password_label.Font = new Font("SansSerif", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            password_label.Location = new Point(90, 262);
-            password_label.Name = "password_label";
-            password_label.Size = new Size(99, 21);
-            password_label.TabIndex = 3;
-            password_label.Text = "  Password";
+            this.password_label.AutoSize = true;
+            this.password_label.Font = new System.Drawing.Font("Sans Serif Collection", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.password_label.Location = new System.Drawing.Point(90, 282);
+            this.password_label.Name = "password_label";
+            this.password_label.Size = new System.Drawing.Size(114, 32);
+            this.password_label.TabIndex = 3;
+            this.password_label.Text = "  Password";
             // 
             // email
             // 
-            email.Font = new Font("Lucida Sans", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            email.Location = new Point(103, 218);
-            email.Name = "email";
-            email.Size = new Size(292, 33);
-            email.TabIndex = 6;
-            email.Text = "";
-            // 
-            // password
-            // 
-            password.Font = new Font("Lucida Sans", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            password.Location = new Point(103, 292);
-            password.Name = "password";
-            password.Size = new Size(292, 32);
-            password.TabIndex = 7;
-            password.Text = "";
+            this.email.Font = new System.Drawing.Font("Lucida Sans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.email.Location = new System.Drawing.Point(103, 238);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(292, 33);
+            this.email.TabIndex = 6;
+            this.email.Text = "";
             // 
             // login_btn
             // 
-            login_btn.BackColor = SystemColors.InactiveCaption;
-            login_btn.BackgroundImage = Properties.Resources.bg_btn;
-            login_btn.BackgroundImageLayout = ImageLayout.Stretch;
-            login_btn.Cursor = Cursors.Hand;
-            login_btn.FlatAppearance.BorderColor = SystemColors.ActiveBorder;
-            login_btn.FlatAppearance.BorderSize = 0;
-            login_btn.FlatStyle = FlatStyle.Flat;
-            login_btn.Font = new Font("SansSerif", 13F, FontStyle.Bold, GraphicsUnit.Point);
-            login_btn.ForeColor = Color.White;
-            login_btn.Location = new Point(185, 404);
-            login_btn.Name = "login_btn";
-            login_btn.Size = new Size(122, 45);
-            login_btn.TabIndex = 8;
-            login_btn.Text = "LOGIN";
-            login_btn.UseVisualStyleBackColor = false;
-            login_btn.Click += login_btn_Click;
+            this.login_btn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.login_btn.BackgroundImage = global::CollegeInformationSystem.Properties.Resources.bg_btn;
+            this.login_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.login_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.login_btn.FlatAppearance.BorderSize = 0;
+            this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_btn.Font = new System.Drawing.Font("Sans Serif Collection", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.login_btn.ForeColor = System.Drawing.Color.White;
+            this.login_btn.Location = new System.Drawing.Point(185, 424);
+            this.login_btn.Name = "login_btn";
+            this.login_btn.Size = new System.Drawing.Size(122, 45);
+            this.login_btn.TabIndex = 8;
+            this.login_btn.Text = "LOGIN";
+            this.login_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.login_btn.UseVisualStyleBackColor = false;
+            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // reset_password_link
             // 
-            reset_password_link.ActiveLinkColor = SystemColors.ButtonFace;
-            reset_password_link.AutoSize = true;
-            reset_password_link.Font = new Font("SansSerif", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            reset_password_link.LinkColor = Color.Black;
-            reset_password_link.Location = new Point(101, 333);
-            reset_password_link.Name = "reset_password_link";
-            reset_password_link.Size = new Size(120, 17);
-            reset_password_link.TabIndex = 9;
-            reset_password_link.TabStop = true;
-            reset_password_link.Text = "Forgot Password";
-            reset_password_link.VisitedLinkColor = SystemColors.ButtonFace;
-            reset_password_link.LinkClicked += reset_password_link_LinkClicked;
+            this.reset_password_link.ActiveLinkColor = System.Drawing.SystemColors.ButtonFace;
+            this.reset_password_link.AutoSize = true;
+            this.reset_password_link.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.reset_password_link.LinkColor = System.Drawing.Color.Black;
+            this.reset_password_link.Location = new System.Drawing.Point(101, 353);
+            this.reset_password_link.Name = "reset_password_link";
+            this.reset_password_link.Size = new System.Drawing.Size(124, 24);
+            this.reset_password_link.TabIndex = 9;
+            this.reset_password_link.TabStop = true;
+            this.reset_password_link.Text = "Forgot Password";
+            this.reset_password_link.VisitedLinkColor = System.Drawing.SystemColors.ButtonFace;
+            this.reset_password_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.reset_password_link_LinkClicked);
             // 
             // register_link
             // 
-            register_link.ActiveLinkColor = SystemColors.ButtonFace;
-            register_link.AutoSize = true;
-            register_link.Font = new Font("SansSerif", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            register_link.LinkColor = Color.Black;
-            register_link.Location = new Point(306, 63);
-            register_link.Name = "register_link";
-            register_link.Size = new Size(159, 17);
-            register_link.TabIndex = 11;
-            register_link.TabStop = true;
-            register_link.Text = "I don't have an account";
-            register_link.VisitedLinkColor = SystemColors.ButtonFace;
+            this.register_link.ActiveLinkColor = System.Drawing.SystemColors.ButtonFace;
+            this.register_link.AutoSize = true;
+            this.register_link.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.register_link.LinkColor = System.Drawing.Color.Black;
+            this.register_link.Location = new System.Drawing.Point(306, 63);
+            this.register_link.Name = "register_link";
+            this.register_link.Size = new System.Drawing.Size(156, 24);
+            this.register_link.TabIndex = 11;
+            this.register_link.TabStop = true;
+            this.register_link.Text = "I don\'t have an account";
+            this.register_link.VisitedLinkColor = System.Drawing.SystemColors.ButtonFace;
+            this.register_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.register_link_LinkClicked);
+            // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(103, 313);
+            this.password.Name = "password";
+            this.password.PasswordChar = '•';
+            this.password.Size = new System.Drawing.Size(292, 37);
+            this.password.TabIndex = 12;
             // 
             // login_form
             // 
-            BackColor = SystemColors.InactiveCaption;
-            ClientSize = new Size(484, 461);
-            Controls.Add(register_link);
-            Controls.Add(reset_password_link);
-            Controls.Add(login_btn);
-            Controls.Add(password);
-            Controls.Add(email);
-            Controls.Add(password_label);
-            Controls.Add(email_label);
-            Controls.Add(login_label);
-            Controls.Add(picturebox_wave);
-            Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "login_form";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login";
-            Load += login_form_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picturebox_wave).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(484, 552);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.register_link);
+            this.Controls.Add(this.reset_password_link);
+            this.Controls.Add(this.login_btn);
+            this.Controls.Add(this.email);
+            this.Controls.Add(this.password_label);
+            this.Controls.Add(this.email_label);
+            this.Controls.Add(this.login_label);
+            this.Controls.Add(this.picturebox_wave);
+            this.Font = new System.Drawing.Font("Sans Serif Collection", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "login_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
+            this.Load += new System.EventHandler(this.login_form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox_wave)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -200,9 +203,9 @@
         private Label email_label;
         private Label password_label;
         private RichTextBox email;
-        private RichTextBox password;
         private Button login_btn;
         private LinkLabel reset_password_link;
         private LinkLabel register_link;
+        private TextBox password;
     }
 }
