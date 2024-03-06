@@ -68,7 +68,19 @@ namespace CollegeInformationSystem
                         string[] values = {emailText, passwordText};
 
                         databaseConnection.InsertData(tableName, columnNames, values);
-                        
+                        MessageBox.Show("Registered Successfully!");
+
+                        login_form loginForm = new login_form();
+
+                        // Hide the current form (register form)
+                        this.Hide();
+
+                        // Show the login form
+                        loginForm.ShowDialog();
+
+                        // Close the current form after the login form is closed
+                        this.Close();
+
                     }
                     else
                     {

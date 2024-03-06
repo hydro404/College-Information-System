@@ -49,7 +49,7 @@
             this.show_campuses.ForeColor = System.Drawing.Color.White;
             this.show_campuses.Location = new System.Drawing.Point(25, 376);
             this.show_campuses.Name = "show_campuses";
-            this.show_campuses.Size = new System.Drawing.Size(174, 45);
+            this.show_campuses.Size = new System.Drawing.Size(149, 45);
             this.show_campuses.TabIndex = 0;
             this.show_campuses.Text = "SHOW CAMPUSES";
             this.show_campuses.UseVisualStyleBackColor = false;
@@ -64,9 +64,9 @@
             this.show_passed_students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.show_passed_students.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.show_passed_students.ForeColor = System.Drawing.Color.White;
-            this.show_passed_students.Location = new System.Drawing.Point(399, 376);
+            this.show_passed_students.Location = new System.Drawing.Point(418, 376);
             this.show_passed_students.Name = "show_passed_students";
-            this.show_passed_students.Size = new System.Drawing.Size(174, 45);
+            this.show_passed_students.Size = new System.Drawing.Size(149, 45);
             this.show_passed_students.TabIndex = 1;
             this.show_passed_students.Text = "SHOW PASSED STUDENTS";
             this.show_passed_students.UseVisualStyleBackColor = false;
@@ -93,9 +93,9 @@
             this.edit_student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.edit_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.edit_student.ForeColor = System.Drawing.Color.White;
-            this.edit_student.Location = new System.Drawing.Point(212, 376);
+            this.edit_student.Location = new System.Drawing.Point(225, 376);
             this.edit_student.Name = "edit_student";
-            this.edit_student.Size = new System.Drawing.Size(174, 45);
+            this.edit_student.Size = new System.Drawing.Size(149, 45);
             this.edit_student.TabIndex = 3;
             this.edit_student.Text = "EDIT A STUDENT";
             this.edit_student.UseVisualStyleBackColor = false;
@@ -121,9 +121,9 @@
             this.generate_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.generate_report.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.generate_report.ForeColor = System.Drawing.Color.White;
-            this.generate_report.Location = new System.Drawing.Point(589, 376);
+            this.generate_report.Location = new System.Drawing.Point(614, 376);
             this.generate_report.Name = "generate_report";
-            this.generate_report.Size = new System.Drawing.Size(174, 45);
+            this.generate_report.Size = new System.Drawing.Size(149, 45);
             this.generate_report.TabIndex = 5;
             this.generate_report.Text = "GENERATE REPORT";
             this.generate_report.UseVisualStyleBackColor = false;

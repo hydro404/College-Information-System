@@ -40,7 +40,14 @@ namespace CollegeInformationSystem
 
         private void reset_password_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            ResetPassword reset_password = new ResetPassword();
 
+            this.Hide();
+
+            reset_password.ShowDialog();
+
+            // Close the current form after the login form is closed
+            this.Close();
         }
 
         private void login_btn_Click(object sender, EventArgs e)
@@ -69,6 +76,10 @@ namespace CollegeInformationSystem
                 }
             }
             catch { }
+            finally
+            {
+                databaseConnection.Close();
+            }
         }
 
         private void register_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

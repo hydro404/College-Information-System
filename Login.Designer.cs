@@ -101,7 +101,7 @@
             // 
             // email
             // 
-            this.email.Font = new System.Drawing.Font("Lucida Sans", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.email.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.email.Location = new System.Drawing.Point(103, 238);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(292, 33);
