@@ -99,3 +99,4 @@ C:\Users\Hydrogn\Documents\GitHub\College-Information-System\bin\Debug\net6.0-wi
 C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.csproj.CopyComplete
 C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.AddStudent.resources
 C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.EditStudent.resources
+C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.DeleteStudent.resources

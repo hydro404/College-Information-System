@@ -48,5 +48,33 @@ namespace CollegeInformationSystem
             editStudent.ShowDialog();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            login_form loginForm = new login_form();
+
+            // Hide the current form (register form)
+            this.Hide();
+
+            // Show the login form
+            loginForm.ShowDialog();
+
+            // Close the current form after the login form is closed
+            this.Close();
+        }
+
+        private void delete_student_Click(object sender, EventArgs e)
+        {
+            DeleteStudent deleteStudent = new DeleteStudent();
+
+            // Hide the current form (register form)
+            this.Hide();
+
+            // Show the login form
+            deleteStudent.ShowDialog();
+
+            // Close the current form after the login form is closed
+            this.Close();
+        }
     }
 }

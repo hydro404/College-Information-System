@@ -183,6 +183,38 @@ namespace CollegeInformationSystem
             return result;
         }
 
+        public void DeleteData(string tableName, string primaryColumn, string primaryKey)
+        {
+            try
+            {
+                Open(); // Make sure the connection is open before executing the query
+
+                string query = $"DELETE FROM {tableName} WHERE {primaryColumn} = @primaryKey";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    // Use parameters to prevent SQL injection
+                    command.Parameters.AddWithValue("@primaryKey", primaryKey);
+
+                    // Execute the DELETE query
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions as needed (e.g., logging, displaying an error message)
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            finally
+            {
+                // Close the connection when done
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+
 
         public void UpdateData(string tableName, string[] columnNames, string[] values, string conditionColumn, string conditionValue)
         {

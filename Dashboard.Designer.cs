@@ -130,6 +130,7 @@
             delete_student.TabIndex = 7;
             delete_student.Text = "DELETE A STUDENT";
             delete_student.UseVisualStyleBackColor = false;
+            delete_student.Click += delete_student_Click;
             // 
             // button1
             // 
@@ -147,6 +148,7 @@
             button1.TabIndex = 8;
             button1.Text = "LOGOUT";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // Dashboard
             // 
