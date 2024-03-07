@@ -25,12 +25,11 @@ namespace CollegeInformationSystem
         private void Dashboard_Load(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            
-
             string query = "SELECT\r\n    student.student_fname AS Firstname,\r\n    student.student_lname AS Lastname, \r\n    campus.campus_name AS Campus_Name,\r\n    department.department_name AS Department_Name,\r\n    course.course_name as Course,\r\n    course.course_total_units as Units,\r\n    student.student_gwa as GWA\r\nFROM college.student\r\nJOIN college.campus ON student.campus_id = campus.campus_id\r\nJOIN college.department ON student.department_id = department.department_id\r\nJOIN college.course ON student.course_id = course.course_id;\r\n";
             databaseConnection.GetData(query, dataGridView1);
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells; // Adjusted to AllCells
+            dataGridView1.ReadOnly = false;
         }
 
         private void add_student_Click(object sender, EventArgs e)
@@ -38,6 +37,14 @@ namespace CollegeInformationSystem
             AddStudent addStudent = new AddStudent();
             this.Hide();
             addStudent.ShowDialog();
+            this.Close();
+        }
+
+        private void save_changes_Click(object sender, EventArgs e)
+        {
+            EditStudent editStudent = new EditStudent();
+            this.Hide();
+            editStudent.ShowDialog();
             this.Close();
         }
     }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            save_changes = new Button();
+            edit_student = new Button();
             label1 = new Label();
             generate_report = new Button();
             add_student = new Button();
@@ -50,22 +50,23 @@
             dataGridView1.Size = new Size(719, 299);
             dataGridView1.TabIndex = 2;
             // 
-            // save_changes
+            // edit_student
             // 
-            save_changes.BackColor = SystemColors.InactiveCaption;
-            save_changes.BackgroundImage = Properties.Resources.bg_btn;
-            save_changes.BackgroundImageLayout = ImageLayout.Stretch;
-            save_changes.Cursor = Cursors.Hand;
-            save_changes.FlatAppearance.BorderSize = 0;
-            save_changes.FlatStyle = FlatStyle.Flat;
-            save_changes.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            save_changes.ForeColor = Color.White;
-            save_changes.Location = new Point(166, 376);
-            save_changes.Name = "save_changes";
-            save_changes.Size = new Size(125, 45);
-            save_changes.TabIndex = 3;
-            save_changes.Text = "SAVE CHANGES";
-            save_changes.UseVisualStyleBackColor = false;
+            edit_student.BackColor = SystemColors.InactiveCaption;
+            edit_student.BackgroundImage = Properties.Resources.bg_btn;
+            edit_student.BackgroundImageLayout = ImageLayout.Stretch;
+            edit_student.Cursor = Cursors.Hand;
+            edit_student.FlatAppearance.BorderSize = 0;
+            edit_student.FlatStyle = FlatStyle.Flat;
+            edit_student.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            edit_student.ForeColor = Color.White;
+            edit_student.Location = new Point(166, 376);
+            edit_student.Name = "edit_student";
+            edit_student.Size = new Size(125, 45);
+            edit_student.TabIndex = 3;
+            edit_student.Text = "EDIT A STUDENT";
+            edit_student.UseVisualStyleBackColor = false;
+            edit_student.Click += save_changes_Click;
             // 
             // label1
             // 
@@ -158,7 +159,7 @@
             Controls.Add(add_student);
             Controls.Add(generate_report);
             Controls.Add(label1);
-            Controls.Add(save_changes);
+            Controls.Add(edit_student);
             Controls.Add(dataGridView1);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -173,7 +174,7 @@
 
         #endregion
         private DataGridView dataGridView1;
-        private Button save_changes;
+        private Button edit_student;
         private Label label1;
         private Button generate_report;
         private Button add_student;

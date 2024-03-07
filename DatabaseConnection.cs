@@ -97,6 +97,45 @@ namespace CollegeInformationSystem
             }
         }
 
+
+        public string GetData2(string tableName, string columnName, string primaryKey, string primaryColumn)
+        {
+            string result = null;
+
+            try
+            {
+                Open(); // Make sure the connection is open before executing the query
+
+                string query = $"SELECT {columnName} FROM {tableName} WHERE {primaryColumn} = {primaryKey}";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    object value = command.ExecuteScalar();
+
+                    // Check if the result is not null before converting to string
+                    if (value != null)
+                    {
+                        result = value.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions as needed (e.g., logging, displaying an error message)
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            finally
+            {
+                // Close the connection when done
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+
+            return result;
+        }
+
+
         public void UpdateData(string tableName, string[] columnNames, string[] values, string conditionColumn, string conditionValue)
         {
             try
@@ -221,6 +260,41 @@ namespace CollegeInformationSystem
                             string id = reader[idColumn].ToString(); // Get the value of the ID column
                             string value = reader.GetString(1); // Assuming the display value column is at index 1
                             comboBox.Items.Add(new KeyValuePair<string, string>(id, value));
+                        }
+                    }
+                }
+                comboBox.DisplayMember = "Value"; // Display the "Value" property of KeyValuePair in the ComboBox
+                comboBox.ValueMember = "Key"; // Use the "Key" property of KeyValuePair as the value
+                comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions appropriately (e.g., logging, displaying an error message)
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            finally
+            {
+                Close();
+            }
+        }
+
+        public void LoadDataIntoComboBox2(string query, ComboBox comboBox, string idColumn)
+        {
+            try
+            {
+                Open();
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Assuming the column names are strings, adjust accordingly
+
+                            string id = reader[idColumn].ToString(); // Get the value of the ID column
+                            string value = reader.GetString(1);
+                            string value2 = reader.GetString(2);
+                            comboBox.Items.Add(new KeyValuePair<string, string>(id, value + " " +value2));
                         }
                     }
                 }

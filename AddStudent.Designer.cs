@@ -56,7 +56,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(299, 26);
+            label1.Location = new Point(285, 9);
             label1.Name = "label1";
             label1.Size = new Size(245, 39);
             label1.TabIndex = 1;

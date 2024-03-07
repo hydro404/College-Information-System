@@ -102,7 +102,7 @@ namespace CollegeInformationSystem
                 string.IsNullOrEmpty(selectedCampus) || string.IsNullOrEmpty(selectedDepartment) ||
                 string.IsNullOrEmpty(selectedCourse))
                 {
-                   
+
                     MessageBox.Show("All fields must be filled in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
