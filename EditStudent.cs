@@ -51,9 +51,11 @@ namespace CollegeInformationSystem
             string campusSelected = databaseConnection.GetData2(tableName, "campus_id", id, primaryColumn);
             string departmentSelected = databaseConnection.GetData2(tableName, "department_id", id, primaryColumn);
             string courseSelected = databaseConnection.GetData2(tableName, "course_id", id, primaryColumn);
+            string gwa = databaseConnection.GetData2(tableName, "student_gwa", id, primaryColumn);
 
             fname.Text = fnameInput;
             lname.Text = lnameInput;
+            gwa_input.Text = gwa;
 
             select_campus_combobox.Items.Clear();
             string query1 = "SELECT campus_id, campus_name FROM college.campus;";
@@ -68,7 +70,7 @@ namespace CollegeInformationSystem
                     object keyValue = keyProperty.GetValue(item);
 
                     // Compare the "Key" value with courseSelected
-                    if (keyValue != null && keyValue.ToString() == departmentSelected)
+                    if (keyValue != null && keyValue.ToString() == campusSelected)
                     {
                         // Set the selected index based on the match
                         select_campus_combobox.SelectedItem = item;
@@ -77,9 +79,6 @@ namespace CollegeInformationSystem
                     }
                 }
             }
-            MessageBox.Show(campusSelected);
-            MessageBox.Show(departmentSelected);
-            MessageBox.Show(courseSelected);
 
 
             if (select_campus_combobox.SelectedItem != null)
@@ -97,7 +96,7 @@ namespace CollegeInformationSystem
                 {
                     var keyProperty = item.GetType().GetProperty("Key");
 
-                    MessageBox.Show($"Key Value: {keyProperty}", "Key Property Value");
+                    // MessageBox.Show($"Key Value: {keyProperty}", "Key Property Value");
                     if (keyProperty != null)
                     {
                         object keyValue = keyProperty.GetValue(item);
@@ -108,7 +107,7 @@ namespace CollegeInformationSystem
                         {
                             // Set the selected index based on the match
                             select_department_combobox.SelectedItem = item;
-                            
+
                             break; // Exit the loop once a match is found
                         }
                     }
@@ -140,7 +139,7 @@ namespace CollegeInformationSystem
                         {
                             // Set the selected index based on the match
                             select_course_combobox.SelectedItem = item;
-                            
+
                             break; // Exit the loop once a match is found
                         }
                     }
@@ -197,12 +196,67 @@ namespace CollegeInformationSystem
                 if (keyProperty != null)
                 {
                     object keyValue = keyProperty.GetValue(selectedItem);
-                    MessageBox.Show($"Key Value: {keyValue}", "Property Value");
+                    //MessageBox.Show($"Key Value: {keyValue}", "Property Value");
+                }
+
+            }
+        }
+
+        private void add_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                databaseConnection.Open();
+                KeyValuePair<string, string> selectedStudentId = (KeyValuePair<string, string>)select_student_combobox.SelectedItem;
+                string id = selectedStudentId.Key;
+                string fnameInput = fname.Text;
+                string lnameInput = lname.Text;
+                string gwaInput = gwa_input.Text;
+
+                KeyValuePair<string, string> selectedCampusObj = (KeyValuePair<string, string>)select_campus_combobox.SelectedItem;
+                string selectedCampus = selectedCampusObj.Key;
+
+                KeyValuePair<string, string> selectedDepartmentObj = (KeyValuePair<string, string>)select_department_combobox.SelectedItem;
+                string selectedDepartment = selectedDepartmentObj.Key;
+
+                KeyValuePair<string, string> selectedCourseObj = (KeyValuePair<string, string>)select_course_combobox.SelectedItem;
+                string selectedCourse = selectedDepartmentObj.Key;
+
+                if (string.IsNullOrEmpty(fnameInput) || string.IsNullOrEmpty(lnameInput) ||
+                string.IsNullOrEmpty(selectedCampus) || string.IsNullOrEmpty(selectedDepartment) ||
+                string.IsNullOrEmpty(selectedCourse))
+                {
+
+                    MessageBox.Show("All fields must be filled in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Property 'Key' not found.", "Error");
+                    string tableName = "student";
+                    string[] columnNames = { "campus_id", "department_id", "student_fname", "student_lname", "course_id", "student_gwa" };
+                    string[] values = { selectedCampus, selectedDepartment, fnameInput, lnameInput, selectedCourse, gwaInput };
+
+                    databaseConnection.UpdateData2(tableName, columnNames, values, "student_id", id);
+                    MessageBox.Show("Updated Successfully!");
+
+                    Dashboard dashboard = new Dashboard();
+
+                    this.Hide();
+
+                    dashboard.ShowDialog();
+
+                    this.Close();
                 }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Make sure to close the database connection, whether the registration was successful or not
+                databaseConnection.Close();
             }
         }
     }

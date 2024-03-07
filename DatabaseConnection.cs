@@ -97,6 +97,54 @@ namespace CollegeInformationSystem
             }
         }
 
+        public void UpdateData2(string tableName, string[] columnNames, string[] values, string conditionColumn, string conditionValue)
+        {
+            try
+            {
+                Open();
+                for (int i = 0; i < columnNames.Length; i++)
+                {
+                    if (columnNames[i].ToLower() == "password")
+                    {
+                        values[i] = HashPassword(values[i]);
+                    }
+                }
+
+                // Construct the SET part of the query
+                string setClause = string.Join(", ", columnNames.Select((col, i) => $"{col} = @param{i + 1}"));
+
+                // Construct the WHERE part of the query
+                string whereClause = $"{conditionColumn} = @conditionValue";
+
+                // Combine them into the complete UPDATE query
+                string query = $"UPDATE {tableName} SET {setClause} WHERE {whereClause}";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    // Add parameters to the command for SET values
+                    for (int i = 0; i < values.Length; i++)
+                    {
+                        cmd.Parameters.AddWithValue($"@param{i + 1}", values[i]);
+                    }
+
+                    // Add parameter to the command for the WHERE condition
+                    cmd.Parameters.AddWithValue("@conditionValue", conditionValue);
+
+                    // Execute the query
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while updating the data.");
+            }
+            finally
+            {
+                Close();
+            }
+        }
+
+
 
         public string GetData2(string tableName, string columnName, string primaryKey, string primaryColumn)
         {

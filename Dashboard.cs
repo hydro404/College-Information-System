@@ -30,6 +30,7 @@ namespace CollegeInformationSystem
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells; // Adjusted to AllCells
             dataGridView1.ReadOnly = false;
+            dataGridView1.Columns["gwa"].DefaultCellStyle.Format = "N1";
         }
 
         private void add_student_Click(object sender, EventArgs e)

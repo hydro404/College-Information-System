@@ -88,6 +88,7 @@ namespace CollegeInformationSystem
                 databaseConnection.Open();
                 string fnameInput = fname.Text;
                 string lnameInput = lname.Text;
+                string gwaInput = gwa.Text;
 
                 KeyValuePair<string, string> selectedCampusObj = (KeyValuePair<string, string>)select_campus_combobox.SelectedItem;
                 string selectedCampus = selectedCampusObj.Key;
@@ -109,8 +110,8 @@ namespace CollegeInformationSystem
                 else
                 {
                     string tableName = "student";
-                    string[] columnNames = { "campus_id", "department_id", "student_fname", "student_lname", "course_id" };
-                    string[] values = { selectedCampus, selectedDepartment, fnameInput, lnameInput, selectedCourse };
+                    string[] columnNames = { "campus_id", "department_id", "student_fname", "student_lname", "course_id", "student_gwa" };
+                    string[] values = { selectedCampus, selectedDepartment, fnameInput, lnameInput, selectedCourse, gwaInput };
 
                     databaseConnection.InsertData(tableName, columnNames, values);
                     MessageBox.Show("Added Successfully!");

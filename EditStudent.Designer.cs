@@ -42,7 +42,7 @@
             label6 = new Label();
             select_course_combobox = new ComboBox();
             label7 = new Label();
-            richTextBox1 = new RichTextBox();
+            gwa_input = new RichTextBox();
             add_btn = new Button();
             button1 = new Button();
             SuspendLayout();
@@ -189,14 +189,14 @@
             label7.TabIndex = 21;
             label7.Text = "  General Weighted Average";
             // 
-            // richTextBox1
+            // gwa_input
             // 
-            richTextBox1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            richTextBox1.Location = new Point(425, 257);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(358, 33);
-            richTextBox1.TabIndex = 20;
-            richTextBox1.Text = "";
+            gwa_input.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            gwa_input.Location = new Point(425, 257);
+            gwa_input.Name = "gwa_input";
+            gwa_input.Size = new Size(358, 33);
+            gwa_input.TabIndex = 20;
+            gwa_input.Text = "";
             // 
             // add_btn
             // 
@@ -213,6 +213,7 @@
             add_btn.TabIndex = 22;
             add_btn.Text = "SAVE";
             add_btn.UseVisualStyleBackColor = true;
+            add_btn.Click += add_btn_Click;
             // 
             // button1
             // 
@@ -240,7 +241,7 @@
             Controls.Add(button1);
             Controls.Add(add_btn);
             Controls.Add(label7);
-            Controls.Add(richTextBox1);
+            Controls.Add(gwa_input);
             Controls.Add(label6);
             Controls.Add(select_course_combobox);
             Controls.Add(label5);
@@ -280,7 +281,7 @@
         private Label label6;
         private ComboBox select_course_combobox;
         private Label label7;
-        private RichTextBox richTextBox1;
+        private RichTextBox gwa_input;
         private Button add_btn;
         private Button button1;
     }
