@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CollegeInformationSystem;
 using Microsoft.VisualBasic.Devices;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace CollegeInformationSystem
 {
@@ -32,6 +33,7 @@ namespace CollegeInformationSystem
             string columnID = "campus_id";
             string comboBoxQuery = "SELECT campus_id, campus_name FROM college.campus;";
             databaseConnection.LoadDataIntoComboBox(comboBoxQuery, select_campus_combobox, columnID);
+
         }
 
         private void select_campus_combobox_SelectedValueChanged(object sender, EventArgs e)
@@ -80,9 +82,58 @@ namespace CollegeInformationSystem
 
         private void add_btn_Click(object sender, EventArgs e)
         {
-            string fnameInput = fname.Text;
-            string lnameInput = lname.Text;
 
+            try
+            {
+                databaseConnection.Open();
+                string fnameInput = fname.Text;
+                string lnameInput = lname.Text;
+
+                KeyValuePair<string, string> selectedCampusObj = (KeyValuePair<string, string>)select_campus_combobox.SelectedItem;
+                string selectedCampus = selectedCampusObj.Key;
+
+                KeyValuePair<string, string> selectedDepartmentObj = (KeyValuePair<string, string>)select_department_combobox.SelectedItem;
+                string selectedDepartment = selectedDepartmentObj.Key;
+
+                KeyValuePair<string, string> selectedCourseObj = (KeyValuePair<string, string>)select_course_combobox.SelectedItem;
+                string selectedCourse = selectedDepartmentObj.Key;
+
+                if (string.IsNullOrEmpty(fnameInput) || string.IsNullOrEmpty(lnameInput) ||
+                string.IsNullOrEmpty(selectedCampus) || string.IsNullOrEmpty(selectedDepartment) ||
+                string.IsNullOrEmpty(selectedCourse))
+                {
+                   
+                    MessageBox.Show("All fields must be filled in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    string tableName = "student";
+                    string[] columnNames = { "campus_id", "department_id", "student_fname", "student_lname", "course_id" };
+                    string[] values = { selectedCampus, selectedDepartment, fnameInput, lnameInput, selectedCourse };
+
+                    databaseConnection.InsertData(tableName, columnNames, values);
+                    MessageBox.Show("Added Successfully!");
+
+                    Dashboard dashboard = new Dashboard();
+
+                    this.Hide();
+
+                    dashboard.ShowDialog();
+
+                    this.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Make sure to close the database connection, whether the registration was successful or not
+                databaseConnection.Close();
+            }
         }
     }
 }

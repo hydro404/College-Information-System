@@ -85,7 +85,6 @@ namespace CollegeInformationSystem
 
                     // Execute the query
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Successfully Registered!");
                 }
             }
             catch (Exception ex)

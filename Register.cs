@@ -103,5 +103,10 @@ namespace CollegeInformationSystem
                 databaseConnection.Close();
             }
         }
+
+        private void register_form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
