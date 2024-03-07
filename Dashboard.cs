@@ -31,5 +31,12 @@ namespace CollegeInformationSystem
 
         }
 
+        private void add_student_Click(object sender, EventArgs e)
+        {
+            AddStudent addStudent = new AddStudent();
+            this.Hide();
+            addStudent.ShowDialog();
+            this.Close();
+        }
     }
 }

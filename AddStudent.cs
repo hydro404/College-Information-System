@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CollegeInformationSystem;
+using Microsoft.VisualBasic.Devices;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace CollegeInformationSystem
 {
@@ -27,18 +29,60 @@ namespace CollegeInformationSystem
 
         private void AddStudent_Load(object sender, EventArgs e)
         {
-            string column = "campus_name";
-            string table = "campus";
-            string comboBoxQuery = $"SELECT {column} FROM {table}";
-            databaseConnection.LoadDataIntoComboBox(comboBoxQuery, select_campus_combobox);
+            string columnID = "campus_id";
+            string comboBoxQuery = "SELECT campus_id, campus_name FROM college.campus;";
+            databaseConnection.LoadDataIntoComboBox(comboBoxQuery, select_campus_combobox, columnID);
         }
 
         private void select_campus_combobox_SelectedValueChanged(object sender, EventArgs e)
         {
-            string column = "campus_name";
-            string table = "campus";
-            string comboBoxQuery = $"SELECT {column} FROM {table} WHERE";
-            databaseConnection.LoadDataIntoComboBox(comboBoxQuery, select_campus_combobox);
+            if (select_campus_combobox.SelectedItem != null)
+            {
+                select_department_combobox.Items.Clear();
+                // Retrieve the selected value
+                KeyValuePair<string, string> selectedPair = (KeyValuePair<string, string>)select_campus_combobox.SelectedItem;
+                string selectedValue = selectedPair.Key;
+
+                string columnID = "department_id";
+                string comboBoxQuery = $"SELECT {columnID}, department_name FROM college.department WHERE campus_id = '{selectedValue}'";
+                databaseConnection.LoadDataIntoComboBox(comboBoxQuery, select_department_combobox, columnID);
+
+            }
+        }
+
+        private void select_department_combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (select_department_combobox.SelectedItem != null)
+            {
+                select_course_combobox.Items.Clear();
+                // Retrieve the selected value
+                KeyValuePair<string, string> selectedPair = (KeyValuePair<string, string>)select_department_combobox.SelectedItem;
+                string selectedValue = selectedPair.Key;
+
+                string columnID = "course_id";
+                string comboBoxQuery = $"SELECT {columnID}, course_name FROM college.course WHERE department_id = '{selectedValue}'";
+                databaseConnection.LoadDataIntoComboBox(comboBoxQuery, select_course_combobox, columnID);
+
+            }
+        }
+
+        private void cancel_btn_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+
+            this.Hide();
+
+            dashboard.ShowDialog();
+
+            // Close the current form after the login form is closed
+            this.Close();
+        }
+
+        private void add_btn_Click(object sender, EventArgs e)
+        {
+            string fnameInput = fname.Text;
+            string lnameInput = lname.Text;
+
         }
     }
 }

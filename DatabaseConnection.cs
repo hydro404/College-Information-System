@@ -206,7 +206,7 @@ namespace CollegeInformationSystem
             }
         }
 
-        public void LoadDataIntoComboBox(string query, ComboBox comboBox)
+        public void LoadDataIntoComboBox(string query, ComboBox comboBox, string idColumn)
         {
             try
             {
@@ -217,12 +217,17 @@ namespace CollegeInformationSystem
                     {
                         while (reader.Read())
                         {
-                            // Assuming the column name is a string, adjust accordingly
-                            string value = reader.GetString(0);
-                            comboBox.Items.Add(value);
+                            // Assuming the column names are strings, adjust accordingly
+                            
+                            string id = reader[idColumn].ToString(); // Get the value of the ID column
+                            string value = reader.GetString(1); // Assuming the display value column is at index 1
+                            comboBox.Items.Add(new KeyValuePair<string, string>(id, value));
                         }
                     }
                 }
+                comboBox.DisplayMember = "Value"; // Display the "Value" property of KeyValuePair in the ComboBox
+                comboBox.ValueMember = "Key"; // Use the "Key" property of KeyValuePair as the value
+                comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             }
             catch (Exception ex)
             {
@@ -234,6 +239,5 @@ namespace CollegeInformationSystem
                 Close();
             }
         }
-
     }
 }
