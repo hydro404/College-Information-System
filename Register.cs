@@ -64,8 +64,8 @@ namespace CollegeInformationSystem
                     if (IsValidEmail(emailText))
                     {
                         string tableName = "users";
-                        string[] columnNames = { "email", "password"};
-                        string[] values = {emailText, passwordText};
+                        string[] columnNames = { "email", "password" };
+                        string[] values = { emailText, passwordText };
 
                         databaseConnection.InsertData(tableName, columnNames, values);
                         MessageBox.Show("Registered Successfully!");

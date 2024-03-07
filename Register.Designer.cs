@@ -28,153 +28,152 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.register_label = new System.Windows.Forms.Label();
-            this.email_label = new System.Windows.Forms.Label();
-            this.email = new System.Windows.Forms.RichTextBox();
-            this.password_label = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.register_btn = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.password = new System.Windows.Forms.TextBox();
-            this.confirm_password = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            register_label = new Label();
+            email_label = new Label();
+            email = new RichTextBox();
+            password_label = new Label();
+            label2 = new Label();
+            register_btn = new Button();
+            linkLabel1 = new LinkLabel();
+            password = new TextBox();
+            confirm_password = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::CollegeInformationSystem.Properties.Resources.svgviewer_png_output;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(502, 92);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.ErrorImage = null;
+            pictureBox1.Image = Properties.Resources.svgviewer_png_output;
+            pictureBox1.Location = new Point(-4, -14);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(502, 92);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // register_label
             // 
-            this.register_label.AutoSize = true;
-            this.register_label.Font = new System.Drawing.Font("Sans Serif Collection", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.register_label.Location = new System.Drawing.Point(165, 131);
-            this.register_label.Name = "register_label";
-            this.register_label.Size = new System.Drawing.Size(163, 56);
-            this.register_label.TabIndex = 1;
-            this.register_label.Text = "Register";
+            register_label.AutoSize = true;
+            register_label.Font = new Font("Microsoft Sans Serif", 24.75F, FontStyle.Bold, GraphicsUnit.Point);
+            register_label.Location = new Point(171, 131);
+            register_label.Name = "register_label";
+            register_label.Size = new Size(147, 38);
+            register_label.TabIndex = 1;
+            register_label.Text = "Register";
             // 
             // email_label
             // 
-            this.email_label.AutoSize = true;
-            this.email_label.Font = new System.Drawing.Font("Sans Serif Collection", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.email_label.Location = new System.Drawing.Point(90, 194);
-            this.email_label.Name = "email_label";
-            this.email_label.Size = new System.Drawing.Size(153, 32);
-            this.email_label.TabIndex = 2;
-            this.email_label.Text = "  Email address";
+            email_label.AutoSize = true;
+            email_label.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            email_label.Location = new Point(90, 194);
+            email_label.Name = "email_label";
+            email_label.Size = new Size(141, 28);
+            email_label.TabIndex = 2;
+            email_label.Text = "  Email address";
             // 
             // email
             // 
-            this.email.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.email.Location = new System.Drawing.Point(103, 229);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(292, 33);
-            this.email.TabIndex = 1;
-            this.email.Text = "";
+            email.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            email.Location = new Point(103, 229);
+            email.Name = "email";
+            email.Size = new Size(292, 33);
+            email.TabIndex = 1;
+            email.Text = "";
             // 
             // password_label
             // 
-            this.password_label.AutoSize = true;
-            this.password_label.Font = new System.Drawing.Font("Sans Serif Collection", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.password_label.Location = new System.Drawing.Point(90, 275);
-            this.password_label.Name = "password_label";
-            this.password_label.Size = new System.Drawing.Size(114, 32);
-            this.password_label.TabIndex = 4;
-            this.password_label.Text = "  Password";
+            password_label.AutoSize = true;
+            password_label.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            password_label.Location = new Point(90, 275);
+            password_label.Name = "password_label";
+            password_label.Size = new Size(103, 28);
+            password_label.TabIndex = 4;
+            password_label.Text = "  Password";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sans Serif Collection", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(90, 355);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 32);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "  Confirm Password";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(90, 355);
+            label2.Name = "label2";
+            label2.Size = new Size(178, 28);
+            label2.TabIndex = 6;
+            label2.Text = "  Confirm Password";
             // 
             // register_btn
             // 
-            this.register_btn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.register_btn.BackgroundImage = global::CollegeInformationSystem.Properties.Resources.bg_btn;
-            this.register_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.register_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.register_btn.FlatAppearance.BorderSize = 0;
-            this.register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.register_btn.Font = new System.Drawing.Font("Sans Serif Collection", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.register_btn.ForeColor = System.Drawing.Color.White;
-            this.register_btn.Location = new System.Drawing.Point(183, 441);
-            this.register_btn.Name = "register_btn";
-            this.register_btn.Size = new System.Drawing.Size(122, 45);
-            this.register_btn.TabIndex = 4;
-            this.register_btn.Text = "Register";
-            this.register_btn.UseVisualStyleBackColor = false;
-            this.register_btn.Click += new System.EventHandler(this.register_btn_Click);
+            register_btn.BackColor = SystemColors.InactiveCaption;
+            register_btn.BackgroundImage = Properties.Resources.bg_btn;
+            register_btn.BackgroundImageLayout = ImageLayout.Stretch;
+            register_btn.Cursor = Cursors.Hand;
+            register_btn.FlatAppearance.BorderSize = 0;
+            register_btn.FlatStyle = FlatStyle.Flat;
+            register_btn.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            register_btn.ForeColor = Color.White;
+            register_btn.Location = new Point(183, 441);
+            register_btn.Name = "register_btn";
+            register_btn.Size = new Size(122, 45);
+            register_btn.TabIndex = 4;
+            register_btn.Text = "REGISTER";
+            register_btn.UseVisualStyleBackColor = false;
+            register_btn.Click += register_btn_Click;
             // 
             // linkLabel1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Sans Serif Collection", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(303, 63);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(172, 24);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "I already have an account";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            linkLabel1.LinkColor = Color.Black;
+            linkLabel1.Location = new Point(278, 66);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(185, 21);
+            linkLabel1.TabIndex = 5;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "I already have an account";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // password
             // 
-            this.password.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.password.Location = new System.Drawing.Point(100, 312);
-            this.password.Name = "password";
-            this.password.PasswordChar = '•';
-            this.password.Size = new System.Drawing.Size(292, 34);
-            this.password.TabIndex = 2;
+            password.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            password.Location = new Point(100, 312);
+            password.Name = "password";
+            password.PasswordChar = '•';
+            password.Size = new Size(292, 34);
+            password.TabIndex = 2;
             // 
             // confirm_password
             // 
-            this.confirm_password.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.confirm_password.Location = new System.Drawing.Point(100, 390);
-            this.confirm_password.Name = "confirm_password";
-            this.confirm_password.PasswordChar = '•';
-            this.confirm_password.Size = new System.Drawing.Size(292, 34);
-            this.confirm_password.TabIndex = 3;
+            confirm_password.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            confirm_password.Location = new Point(100, 390);
+            confirm_password.Name = "confirm_password";
+            confirm_password.PasswordChar = '•';
+            confirm_password.Size = new Size(292, 34);
+            confirm_password.TabIndex = 3;
             // 
             // register_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(484, 552);
-            this.Controls.Add(this.confirm_password);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.register_btn);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.password_label);
-            this.Controls.Add(this.email);
-            this.Controls.Add(this.email_label);
-            this.Controls.Add(this.register_label);
-            this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "register_form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Register";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveCaption;
+            ClientSize = new Size(484, 552);
+            Controls.Add(confirm_password);
+            Controls.Add(password);
+            Controls.Add(linkLabel1);
+            Controls.Add(register_btn);
+            Controls.Add(label2);
+            Controls.Add(password_label);
+            Controls.Add(email);
+            Controls.Add(email_label);
+            Controls.Add(register_label);
+            Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "register_form";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Register";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

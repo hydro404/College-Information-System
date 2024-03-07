@@ -57,7 +57,7 @@ namespace CollegeInformationSystem
                 databaseConnection.Open();
                 string emailText = email.Text;
                 string passwordText = password.Text;
-                if(databaseConnection.CheckLoginCredentials(emailText, passwordText))
+                if (databaseConnection.CheckLoginCredentials(emailText, passwordText))
                 {
                     MessageBox.Show("Login Successful!");
                     Dashboard dashboard = new Dashboard();
@@ -92,6 +92,11 @@ namespace CollegeInformationSystem
 
             // Close the current form after the login form is closed
             this.Close();
+        }
+
+        private void picturebox_wave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

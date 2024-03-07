@@ -28,137 +28,156 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.show_campuses = new System.Windows.Forms.Button();
-            this.show_passed_students = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.edit_student = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.generate_report = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            show_campuses = new Button();
+            dataGridView1 = new DataGridView();
+            save_changes = new Button();
+            label1 = new Label();
+            generate_report = new Button();
+            add_student = new Button();
+            delete_student = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // show_campuses
             // 
-            this.show_campuses.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.show_campuses.BackgroundImage = global::CollegeInformationSystem.Properties.Resources.bg_btn;
-            this.show_campuses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.show_campuses.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.show_campuses.FlatAppearance.BorderSize = 0;
-            this.show_campuses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.show_campuses.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.show_campuses.ForeColor = System.Drawing.Color.White;
-            this.show_campuses.Location = new System.Drawing.Point(25, 376);
-            this.show_campuses.Name = "show_campuses";
-            this.show_campuses.Size = new System.Drawing.Size(149, 45);
-            this.show_campuses.TabIndex = 0;
-            this.show_campuses.Text = "SHOW CAMPUSES";
-            this.show_campuses.UseVisualStyleBackColor = false;
-            // 
-            // show_passed_students
-            // 
-            this.show_passed_students.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.show_passed_students.BackgroundImage = global::CollegeInformationSystem.Properties.Resources.bg_btn;
-            this.show_passed_students.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.show_passed_students.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.show_passed_students.FlatAppearance.BorderSize = 0;
-            this.show_passed_students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.show_passed_students.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.show_passed_students.ForeColor = System.Drawing.Color.White;
-            this.show_passed_students.Location = new System.Drawing.Point(418, 376);
-            this.show_passed_students.Name = "show_passed_students";
-            this.show_passed_students.Size = new System.Drawing.Size(149, 45);
-            this.show_passed_students.TabIndex = 1;
-            this.show_passed_students.Text = "SHOW PASSED STUDENTS";
-            this.show_passed_students.UseVisualStyleBackColor = false;
+            show_campuses.BackColor = SystemColors.InactiveCaption;
+            show_campuses.BackgroundImage = Properties.Resources.bg_btn;
+            show_campuses.BackgroundImageLayout = ImageLayout.Stretch;
+            show_campuses.Cursor = Cursors.Hand;
+            show_campuses.FlatAppearance.BorderSize = 0;
+            show_campuses.FlatStyle = FlatStyle.Flat;
+            show_campuses.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            show_campuses.ForeColor = Color.White;
+            show_campuses.Location = new Point(25, 376);
+            show_campuses.Name = "show_campuses";
+            show_campuses.Size = new Size(125, 45);
+            show_campuses.TabIndex = 0;
+            show_campuses.Text = "SHOW CAMPUSES";
+            show_campuses.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 58);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(738, 299);
-            this.dataGridView1.TabIndex = 2;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(35, 61);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(719, 299);
+            dataGridView1.TabIndex = 2;
             // 
-            // edit_student
+            // save_changes
             // 
-            this.edit_student.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.edit_student.BackgroundImage = global::CollegeInformationSystem.Properties.Resources.bg_btn;
-            this.edit_student.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.edit_student.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.edit_student.FlatAppearance.BorderSize = 0;
-            this.edit_student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.edit_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.edit_student.ForeColor = System.Drawing.Color.White;
-            this.edit_student.Location = new System.Drawing.Point(225, 376);
-            this.edit_student.Name = "edit_student";
-            this.edit_student.Size = new System.Drawing.Size(149, 45);
-            this.edit_student.TabIndex = 3;
-            this.edit_student.Text = "EDIT A STUDENT";
-            this.edit_student.UseVisualStyleBackColor = false;
+            save_changes.BackColor = SystemColors.InactiveCaption;
+            save_changes.BackgroundImage = Properties.Resources.bg_btn;
+            save_changes.BackgroundImageLayout = ImageLayout.Stretch;
+            save_changes.Cursor = Cursors.Hand;
+            save_changes.FlatAppearance.BorderSize = 0;
+            save_changes.FlatStyle = FlatStyle.Flat;
+            save_changes.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            save_changes.ForeColor = Color.White;
+            save_changes.Location = new Point(332, 376);
+            save_changes.Name = "save_changes";
+            save_changes.Size = new Size(125, 45);
+            save_changes.TabIndex = 3;
+            save_changes.Text = "SAVE CHANGES";
+            save_changes.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(25, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Hello, Admin!";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(25, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(141, 25);
+            label1.TabIndex = 4;
+            label1.Text = "Hello, Admin!";
             // 
             // generate_report
             // 
-            this.generate_report.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.generate_report.BackgroundImage = global::CollegeInformationSystem.Properties.Resources.bg_btn;
-            this.generate_report.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.generate_report.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.generate_report.FlatAppearance.BorderSize = 0;
-            this.generate_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.generate_report.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.generate_report.ForeColor = System.Drawing.Color.White;
-            this.generate_report.Location = new System.Drawing.Point(614, 376);
-            this.generate_report.Name = "generate_report";
-            this.generate_report.Size = new System.Drawing.Size(149, 45);
-            this.generate_report.TabIndex = 5;
-            this.generate_report.Text = "GENERATE REPORT";
-            this.generate_report.UseVisualStyleBackColor = false;
+            generate_report.BackColor = SystemColors.InactiveCaption;
+            generate_report.BackgroundImage = Properties.Resources.bg_btn;
+            generate_report.BackgroundImageLayout = ImageLayout.Stretch;
+            generate_report.Cursor = Cursors.Hand;
+            generate_report.FlatAppearance.BorderSize = 0;
+            generate_report.FlatStyle = FlatStyle.Flat;
+            generate_report.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            generate_report.ForeColor = Color.White;
+            generate_report.Location = new Point(638, 376);
+            generate_report.Name = "generate_report";
+            generate_report.Size = new Size(125, 45);
+            generate_report.TabIndex = 5;
+            generate_report.Text = "GENERATE REPORT";
+            generate_report.UseVisualStyleBackColor = false;
+            // 
+            // add_student
+            // 
+            add_student.BackColor = SystemColors.InactiveCaption;
+            add_student.BackgroundImage = Properties.Resources.bg_btn;
+            add_student.BackgroundImageLayout = ImageLayout.Stretch;
+            add_student.Cursor = Cursors.Hand;
+            add_student.FlatAppearance.BorderSize = 0;
+            add_student.FlatStyle = FlatStyle.Flat;
+            add_student.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            add_student.ForeColor = Color.White;
+            add_student.Location = new Point(179, 376);
+            add_student.Name = "add_student";
+            add_student.Size = new Size(125, 45);
+            add_student.TabIndex = 6;
+            add_student.Text = "ADD A STUDENT";
+            add_student.UseVisualStyleBackColor = false;
+            // 
+            // delete_student
+            // 
+            delete_student.BackColor = SystemColors.InactiveCaption;
+            delete_student.BackgroundImage = Properties.Resources.bg_btn;
+            delete_student.BackgroundImageLayout = ImageLayout.Stretch;
+            delete_student.Cursor = Cursors.Hand;
+            delete_student.FlatAppearance.BorderSize = 0;
+            delete_student.FlatStyle = FlatStyle.Flat;
+            delete_student.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            delete_student.ForeColor = Color.White;
+            delete_student.Location = new Point(487, 376);
+            delete_student.Name = "delete_student";
+            delete_student.Size = new Size(125, 45);
+            delete_student.TabIndex = 7;
+            delete_student.Text = "DELETE A STUDENT";
+            delete_student.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.generate_report);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.edit_student);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.show_passed_students);
-            this.Controls.Add(this.show_campuses);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Dashboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard";
-            this.Load += new System.EventHandler(this.Dashboard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveCaption;
+            ClientSize = new Size(800, 450);
+            Controls.Add(delete_student);
+            Controls.Add(add_student);
+            Controls.Add(generate_report);
+            Controls.Add(label1);
+            Controls.Add(save_changes);
+            Controls.Add(dataGridView1);
+            Controls.Add(show_campuses);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Dashboard";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Dashboard";
+            Load += Dashboard_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button show_campuses;
-        private Button show_passed_students;
         private DataGridView dataGridView1;
-        private Button edit_student;
+        private Button save_changes;
         private Label label1;
         private Button generate_report;
+        private Button add_student;
+        private Button delete_student;
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.Text;
+using System.Data;
 
 namespace CollegeInformationSystem
 {
@@ -176,5 +177,63 @@ namespace CollegeInformationSystem
 
             return isAuthenticated;
         }
+
+        public void GetData(string query, DataGridView dataGridView)
+        {
+            try
+            {
+                Open();
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        // Bind the DataTable to the DataGridView
+                        dataGridView.DataSource = dataTable;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions appropriately (e.g., logging, displaying an error message)
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            finally
+            {
+                Close();
+            }
+        }
+
+        public void LoadDataIntoComboBox(string query, ComboBox comboBox)
+        {
+            try
+            {
+                Open();
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Assuming the column name is a string, adjust accordingly
+                            string value = reader.GetString(0);
+                            comboBox.Items.Add(value);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions appropriately (e.g., logging, displaying an error message)
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            finally
+            {
+                Close();
+            }
+        }
+
     }
 }

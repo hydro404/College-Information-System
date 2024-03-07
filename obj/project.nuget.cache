@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v/kv6FkfNqqkMeE7Z5z8kvzj3x/iIhXw9HwON1UnXFuhnIQcc/pknZqHHbNFpeC0+I7V2FRiBoBV/pzemY55Zw==",
+  "dgSpecHash": "ntficvgAIKnIAsJ1K/m7pEX5NQvfCyFBmmGvIHYYs6hbFmmZud6nR6j3pS14RcX1krsUDyECO0tnzIrHz83EFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hydrogn\\Documents\\HYDRO WORKSPACE\\GitHub\\College-Information-System\\CollegeInformationSystem.csproj",
+  "projectFilePath": "C:\\Users\\Hydrogn\\Documents\\GitHub\\College-Information-System\\CollegeInformationSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hydrogn\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Hydrogn\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

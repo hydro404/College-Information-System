@@ -96,6 +96,7 @@
             Controls.Add(label1);
             Name = "ReportGeneration";
             Text = "Report Generation";
+            Load += ReportGeneration_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

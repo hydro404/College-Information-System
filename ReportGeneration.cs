@@ -16,5 +16,10 @@ namespace CollegeInformationSystem
         {
             InitializeComponent();
         }
+
+        private void ReportGeneration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
