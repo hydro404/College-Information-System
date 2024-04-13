@@ -163,21 +163,46 @@ namespace CollegeInformationSystem
             // Add a new worksheet to the Excel package
             ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add(sheetName);
 
-            // Add the column headers from the DataGridView to the Excel file
+            // Add logo at the top
+            var logo = worksheet.Drawings.AddPicture("Logo", new FileInfo("../../../assets/img/logo.png"));
+
+            // Set position and size of the logo
+            int logoLeftPosition = 0; // Left position
+            int logoTopPosition = 0; // Top position
+            int logoWidth = 200; // Width of the logo in pixels
+            int logoHeight = 200; // Height of the logo in pixels
+
+            logo.SetPosition(logoTopPosition, logoLeftPosition);
+            logo.SetSize(logoWidth, logoHeight);
+
+            worksheet.Cells[5, 4].Value = "Bicol University";
+            worksheet.Cells[5, 4].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+            worksheet.Cells[6, 4].Value = "Legazpi City, 4502";
+            worksheet.Cells[6, 4].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+            // Export DataGridView to the worksheet
             for (int i = 1; i <= dataGridView.Columns.Count; i++)
             {
-                worksheet.Cells[1, i].Value = dataGridView.Columns[i - 1].HeaderText;
+                worksheet.Cells[13, i].Value = dataGridView.Columns[i - 1].HeaderText;
             }
 
-            // Add the data from the DataGridView to the Excel file
             for (int i = 0; i < dataGridView.Rows.Count; i++)
             {
                 for (int j = 0; j < dataGridView.Columns.Count; j++)
                 {
-                    worksheet.Cells[i + 2, j + 1].Value = dataGridView.Rows[i].Cells[j].Value?.ToString();
+                    worksheet.Cells[i + 14, j + 1].Value = dataGridView.Rows[i].Cells[j].Value?.ToString() ?? "";
                 }
             }
+
+            // Add signatory author at the bottom
+            string name = "Francine Belgica";
+            worksheet.Cells[dataGridView.Rows.Count + 15, 4].Value = $"{name}";
+            worksheet.Cells[dataGridView.Rows.Count + 16, 4].Value = $"Registrar, Bicol University";
+
+            // Autofit columns for better readability
+            worksheet.Cells.AutoFitColumns();
         }
+
+
 
         private void ExportChartToSheet(Chart chart, ExcelPackage excelPackage, string sheetName)
         {
