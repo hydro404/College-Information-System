@@ -239,6 +239,11 @@ namespace CollegeInformationSystem
                     databaseConnection.UpdateData2(tableName, columnNames, values, "student_id", id);
                     MessageBox.Show("Updated Successfully!");
 
+                    string actionType = "Edit a Student";
+                    string description = $"Student updated: {fnameInput} {lnameInput} Campus: {selectedCampus} Department: {selectedDepartment} Course: {selectedCourse} GWA: {gwaInput}";
+
+                    databaseConnection.InsertLog(actionType, description);
+
                     Dashboard dashboard = new Dashboard();
 
                     this.Hide();

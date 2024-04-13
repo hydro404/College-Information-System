@@ -28,98 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            comboBox1 = new ComboBox();
-            label3 = new Label();
-            delete_btn = new Button();
-            button1 = new Button();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.delete_btn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(69, 49);
-            label1.Name = "label1";
-            label1.Size = new Size(412, 39);
-            label1.TabIndex = 3;
-            label1.Text = "Delete a Student Record";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(69, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(412, 39);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Delete a Student Record";
             // 
             // comboBox1
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(148, 161);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(253, 33);
-            comboBox1.TabIndex = 4;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(148, 161);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(253, 33);
+            this.comboBox1.TabIndex = 4;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(134, 130);
-            label3.Name = "label3";
-            label3.Size = new Size(147, 28);
-            label3.TabIndex = 10;
-            label3.Text = "  Select Student";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(134, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(147, 28);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "  Select Student";
             // 
             // delete_btn
             // 
-            delete_btn.BackgroundImage = Properties.Resources.bg_btn;
-            delete_btn.BackgroundImageLayout = ImageLayout.Stretch;
-            delete_btn.Cursor = Cursors.Hand;
-            delete_btn.FlatAppearance.BorderSize = 0;
-            delete_btn.FlatStyle = FlatStyle.Flat;
-            delete_btn.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            delete_btn.ForeColor = SystemColors.ButtonHighlight;
-            delete_btn.Location = new Point(403, 383);
-            delete_btn.Name = "delete_btn";
-            delete_btn.Size = new Size(122, 45);
-            delete_btn.TabIndex = 23;
-            delete_btn.Text = "DELETE";
-            delete_btn.UseVisualStyleBackColor = true;
-            delete_btn.Click += delete_btn_Click;
+            this.delete_btn.BackgroundImage = global::CollegeInformationSystem.Properties.Resources.bg_btn;
+            this.delete_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.delete_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete_btn.FlatAppearance.BorderSize = 0;
+            this.delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete_btn.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.delete_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.delete_btn.Location = new System.Drawing.Point(403, 383);
+            this.delete_btn.Name = "delete_btn";
+            this.delete_btn.Size = new System.Drawing.Size(122, 45);
+            this.delete_btn.TabIndex = 23;
+            this.delete_btn.Text = "DELETE";
+            this.delete_btn.UseVisualStyleBackColor = true;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
             // button1
             // 
-            button1.BackgroundImage = Properties.Resources.bg_btn;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(260, 383);
-            button1.Name = "button1";
-            button1.Size = new Size(122, 45);
-            button1.TabIndex = 24;
-            button1.Text = "CANCEL";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.BackgroundImage = global::CollegeInformationSystem.Properties.Resources.bg_btn;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(260, 383);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 45);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "CANCEL";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DeleteStudent
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.InactiveCaption;
-            ClientSize = new Size(553, 450);
-            Controls.Add(button1);
-            Controls.Add(delete_btn);
-            Controls.Add(label3);
-            Controls.Add(comboBox1);
-            Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "DeleteStudent";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "DeleteStudent";
-            Load += DeleteStudent_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(553, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.delete_btn);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "DeleteStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "DeleteStudent";
+            this.Load += new System.EventHandler(this.DeleteStudent_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

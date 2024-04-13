@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CollegeInformationSystem;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CollegeInformationSystem
 {
@@ -33,22 +34,6 @@ namespace CollegeInformationSystem
 
         }
 
-        private void login_form_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void reset_password_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ResetPassword reset_password = new ResetPassword();
-
-            this.Hide();
-
-            reset_password.ShowDialog();
-
-            // Close the current form after the login form is closed
-            this.Close();
-        }
 
         private void login_btn_Click(object sender, EventArgs e)
         {
@@ -82,7 +67,18 @@ namespace CollegeInformationSystem
             }
         }
 
-        private void register_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+        private void picturebox_wave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picturebox_wave_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void register_link_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             register_form register_form = new register_form();
 
@@ -94,9 +90,35 @@ namespace CollegeInformationSystem
             this.Close();
         }
 
-        private void picturebox_wave_Click(object sender, EventArgs e)
+        private void reset_password_link_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            ResetPassword reset_password = new ResetPassword();
 
+            this.Hide();
+
+            reset_password.ShowDialog();
+
+            // Close the current form after the login form is closed
+            this.Close();
+        }
+
+        private void login_form_Load_1(object sender, EventArgs e)
+        {
+            password.UseSystemPasswordChar = true; // Show password
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (button1.Text == "Show")
+            {
+                button1.Text = "Hide";
+                password.UseSystemPasswordChar = false; // Show password
+            }
+            else
+            {
+                button1.Text = "Show";
+                password.UseSystemPasswordChar = true; // Hide password
+            }
         }
     }
 }

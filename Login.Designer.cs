@@ -28,177 +28,199 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
-            picturebox_wave = new PictureBox();
-            login_label = new Label();
-            email_label = new Label();
-            password_label = new Label();
-            email = new RichTextBox();
-            login_btn = new Button();
-            reset_password_link = new LinkLabel();
-            register_link = new LinkLabel();
-            password = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picturebox_wave).BeginInit();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login_form));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.login_label = new System.Windows.Forms.Label();
+            this.email_label = new System.Windows.Forms.Label();
+            this.password_label = new System.Windows.Forms.Label();
+            this.email = new System.Windows.Forms.RichTextBox();
+            this.login_btn = new System.Windows.Forms.Button();
+            this.reset_password_link = new System.Windows.Forms.LinkLabel();
+            this.register_link = new System.Windows.Forms.LinkLabel();
+            this.password = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.svgviewer_png_output;
-            pictureBox1.Location = new Point(-5, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(500, 116);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Image = global::CollegeInformationSystem.Properties.Resources.svgviewer_png_output;
+            this.pictureBox1.Location = new System.Drawing.Point(-5, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(500, 116);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 23);
-            label1.TabIndex = 0;
-            // 
-            // picturebox_wave
-            // 
-            picturebox_wave.Image = Properties.Resources.svgviewer_png_output;
-            picturebox_wave.Location = new Point(-4, -14);
-            picturebox_wave.Name = "picturebox_wave";
-            picturebox_wave.Size = new Size(502, 90);
-            picturebox_wave.TabIndex = 0;
-            picturebox_wave.TabStop = false;
-            picturebox_wave.Click += picturebox_wave_Click;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
             // 
             // login_label
             // 
-            login_label.AutoSize = true;
-            login_label.Font = new Font("Microsoft Sans Serif", 24.75F, FontStyle.Bold, GraphicsUnit.Point);
-            login_label.Location = new Point(196, 117);
-            login_label.Name = "login_label";
-            login_label.Size = new Size(101, 38);
-            login_label.TabIndex = 1;
-            login_label.Text = "Login";
-            login_label.Click += label2_Click;
+            this.login_label.AutoSize = true;
+            this.login_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.login_label.Location = new System.Drawing.Point(612, 124);
+            this.login_label.Name = "login_label";
+            this.login_label.Size = new System.Drawing.Size(101, 38);
+            this.login_label.TabIndex = 1;
+            this.login_label.Text = "Login";
             // 
             // email_label
             // 
-            email_label.AutoSize = true;
-            email_label.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            email_label.Location = new Point(90, 205);
-            email_label.Name = "email_label";
-            email_label.Size = new Size(141, 28);
-            email_label.TabIndex = 2;
-            email_label.Text = "  Email address";
+            this.email_label.AutoSize = true;
+            this.email_label.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.email_label.Location = new System.Drawing.Point(507, 183);
+            this.email_label.Name = "email_label";
+            this.email_label.Size = new System.Drawing.Size(141, 28);
+            this.email_label.TabIndex = 2;
+            this.email_label.Text = "  Email address";
             // 
             // password_label
             // 
-            password_label.AutoSize = true;
-            password_label.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            password_label.Location = new Point(90, 282);
-            password_label.Name = "password_label";
-            password_label.Size = new Size(103, 28);
-            password_label.TabIndex = 3;
-            password_label.Text = "  Password";
+            this.password_label.AutoSize = true;
+            this.password_label.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.password_label.Location = new System.Drawing.Point(507, 260);
+            this.password_label.Name = "password_label";
+            this.password_label.Size = new System.Drawing.Size(103, 28);
+            this.password_label.TabIndex = 3;
+            this.password_label.Text = "  Password";
             // 
             // email
             // 
-            email.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            email.Location = new Point(103, 238);
-            email.Name = "email";
-            email.Size = new Size(292, 33);
-            email.TabIndex = 6;
-            email.Text = "";
+            this.email.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.email.Location = new System.Drawing.Point(520, 216);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(292, 33);
+            this.email.TabIndex = 6;
+            this.email.Text = "";
             // 
             // login_btn
             // 
-            login_btn.BackColor = SystemColors.InactiveCaption;
-            login_btn.BackgroundImage = Properties.Resources.bg_btn;
-            login_btn.BackgroundImageLayout = ImageLayout.Stretch;
-            login_btn.Cursor = Cursors.Hand;
-            login_btn.FlatAppearance.BorderColor = SystemColors.ActiveBorder;
-            login_btn.FlatAppearance.BorderSize = 0;
-            login_btn.FlatStyle = FlatStyle.Flat;
-            login_btn.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            login_btn.ForeColor = Color.White;
-            login_btn.Location = new Point(185, 424);
-            login_btn.Name = "login_btn";
-            login_btn.Size = new Size(122, 45);
-            login_btn.TabIndex = 8;
-            login_btn.Text = "LOGIN";
-            login_btn.UseVisualStyleBackColor = false;
-            login_btn.Click += login_btn_Click;
+            this.login_btn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.login_btn.BackgroundImage = global::CollegeInformationSystem.Properties.Resources.bg_btn;
+            this.login_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.login_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.login_btn.FlatAppearance.BorderSize = 0;
+            this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_btn.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.login_btn.ForeColor = System.Drawing.Color.White;
+            this.login_btn.Location = new System.Drawing.Point(602, 402);
+            this.login_btn.Name = "login_btn";
+            this.login_btn.Size = new System.Drawing.Size(122, 45);
+            this.login_btn.TabIndex = 8;
+            this.login_btn.Text = "LOGIN";
+            this.login_btn.UseVisualStyleBackColor = false;
+            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // reset_password_link
             // 
-            reset_password_link.ActiveLinkColor = SystemColors.ButtonFace;
-            reset_password_link.AutoSize = true;
-            reset_password_link.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            reset_password_link.LinkColor = Color.Black;
-            reset_password_link.Location = new Point(101, 353);
-            reset_password_link.Name = "reset_password_link";
-            reset_password_link.Size = new Size(112, 19);
-            reset_password_link.TabIndex = 9;
-            reset_password_link.TabStop = true;
-            reset_password_link.Text = "Forgot Password";
-            reset_password_link.VisitedLinkColor = SystemColors.ButtonFace;
-            reset_password_link.LinkClicked += reset_password_link_LinkClicked;
+            this.reset_password_link.ActiveLinkColor = System.Drawing.SystemColors.ButtonFace;
+            this.reset_password_link.AutoSize = true;
+            this.reset_password_link.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.reset_password_link.LinkColor = System.Drawing.Color.Black;
+            this.reset_password_link.Location = new System.Drawing.Point(518, 331);
+            this.reset_password_link.Name = "reset_password_link";
+            this.reset_password_link.Size = new System.Drawing.Size(112, 19);
+            this.reset_password_link.TabIndex = 9;
+            this.reset_password_link.TabStop = true;
+            this.reset_password_link.Text = "Forgot Password";
+            this.reset_password_link.VisitedLinkColor = System.Drawing.SystemColors.ButtonFace;
+            this.reset_password_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.reset_password_link_LinkClicked_1);
             // 
             // register_link
             // 
-            register_link.ActiveLinkColor = SystemColors.ButtonFace;
-            register_link.AutoSize = true;
-            register_link.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            register_link.LinkColor = Color.Black;
-            register_link.Location = new Point(289, 65);
-            register_link.Name = "register_link";
-            register_link.Size = new Size(170, 21);
-            register_link.TabIndex = 11;
-            register_link.TabStop = true;
-            register_link.Text = "I don't have an account";
-            register_link.VisitedLinkColor = SystemColors.ButtonFace;
-            register_link.LinkClicked += register_link_LinkClicked;
+            this.register_link.ActiveLinkColor = System.Drawing.SystemColors.ButtonFace;
+            this.register_link.AutoSize = true;
+            this.register_link.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.register_link.LinkColor = System.Drawing.Color.Black;
+            this.register_link.Location = new System.Drawing.Point(642, 73);
+            this.register_link.Name = "register_link";
+            this.register_link.Size = new System.Drawing.Size(170, 21);
+            this.register_link.TabIndex = 11;
+            this.register_link.TabStop = true;
+            this.register_link.Text = "I don\'t have an account";
+            this.register_link.VisitedLinkColor = System.Drawing.SystemColors.ButtonFace;
+            this.register_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.register_link_LinkClicked_1);
             // 
             // password
             // 
-            password.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            password.Location = new Point(103, 313);
-            password.Name = "password";
-            password.PasswordChar = '•';
-            password.Size = new Size(292, 34);
-            password.TabIndex = 12;
+            this.password.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.password.Location = new System.Drawing.Point(520, 291);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(292, 34);
+            this.password.TabIndex = 12;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(42, 73);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(400, 371);
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(751, 296);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(59, 22);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Show";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // login_form
             // 
-            BackColor = SystemColors.InactiveCaption;
-            ClientSize = new Size(484, 552);
-            Controls.Add(password);
-            Controls.Add(register_link);
-            Controls.Add(reset_password_link);
-            Controls.Add(login_btn);
-            Controls.Add(email);
-            Controls.Add(password_label);
-            Controls.Add(email_label);
-            Controls.Add(login_label);
-            Controls.Add(picturebox_wave);
-            Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "login_form";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login";
-            Load += login_form_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picturebox_wave).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(884, 552);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.register_link);
+            this.Controls.Add(this.reset_password_link);
+            this.Controls.Add(this.login_btn);
+            this.Controls.Add(this.email);
+            this.Controls.Add(this.password_label);
+            this.Controls.Add(this.email_label);
+            this.Controls.Add(this.login_label);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "login_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
+            this.Load += new System.EventHandler(this.login_form_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
         private PictureBox pictureBox1;
         private Label label1;
-        private PictureBox picturebox_wave;
         private Label login_label;
         private Label email_label;
         private Label password_label;
@@ -207,5 +229,8 @@
         private LinkLabel reset_password_link;
         private LinkLabel register_link;
         private TextBox password;
+        private PictureBox pictureBox2;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private Button button1;
     }
 }

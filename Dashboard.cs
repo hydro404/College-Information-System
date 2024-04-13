@@ -41,14 +41,6 @@ namespace CollegeInformationSystem
             this.Close();
         }
 
-        private void save_changes_Click(object sender, EventArgs e)
-        {
-            EditStudent editStudent = new EditStudent();
-            this.Hide();
-            editStudent.ShowDialog();
-            this.Close();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             login_form loginForm = new login_form();
@@ -74,6 +66,22 @@ namespace CollegeInformationSystem
             deleteStudent.ShowDialog();
 
             // Close the current form after the login form is closed
+            this.Close();
+        }
+
+        private void generate_report_Click(object sender, EventArgs e)
+        {
+            ReportGeneration reportGeneration = new ReportGeneration();
+            this.Hide();
+            reportGeneration.ShowDialog();
+            this.Close();
+        }
+
+        private void edit_student_Click(object sender, EventArgs e)
+        {
+            EditStudent editStudent = new EditStudent();
+            this.Hide();
+            editStudent.ShowDialog();
             this.Close();
         }
     }

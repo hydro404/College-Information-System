@@ -114,7 +114,14 @@ namespace CollegeInformationSystem
                     string[] values = { selectedCampus, selectedDepartment, fnameInput, lnameInput, selectedCourse, gwaInput };
 
                     databaseConnection.InsertData(tableName, columnNames, values);
+
+                    string actionType = "Add a Student";
+                    string description = $"Student added: {fnameInput} {lnameInput} Campus: {selectedCampus} Department: {selectedDepartment} Course: {selectedCourse} GWA: {gwaInput}";
+
+                    databaseConnection.InsertLog(actionType, description);
+
                     MessageBox.Show("Added Successfully!");
+
 
                     Dashboard dashboard = new Dashboard();
 
@@ -136,5 +143,6 @@ namespace CollegeInformationSystem
                 databaseConnection.Close();
             }
         }
+
     }
 }

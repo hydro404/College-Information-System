@@ -106,7 +106,37 @@ namespace CollegeInformationSystem
 
         private void register_form_Load(object sender, EventArgs e)
         {
-
+            password.UseSystemPasswordChar = true; // Hide password
+            confirm_password.UseSystemPasswordChar = true; // Hide password
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (button1.Text == "Show")
+            {
+                button1.Text = "Hide";
+                password.UseSystemPasswordChar = false; // Show password
+            }
+            else
+            {
+                button1.Text = "Show";
+                password.UseSystemPasswordChar = true; // Hide password
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (button2.Text == "Show")
+            {
+                button2.Text = "Hide";
+                confirm_password.UseSystemPasswordChar = false; // Show password
+            }
+            else
+            {
+                button2.Text = "Show";
+                confirm_password.UseSystemPasswordChar = true; // Hide password
+            }
+        }
+
     }
 }

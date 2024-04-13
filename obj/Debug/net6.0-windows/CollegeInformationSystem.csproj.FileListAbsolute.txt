@@ -100,3 +100,24 @@ C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-wi
 C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.AddStudent.resources
 C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.EditStudent.resources
 C:\Users\Hydrogn\Documents\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.DeleteStudent.resources
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.AddStudent.resources
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.DeleteStudent.resources
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.EditStudent.resources
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\EPPlus.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\EPPlus.Interfaces.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\EPPlus.System.Drawing.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\obj\Debug\net6.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\Hydrogn\Documents\HYDRO WORKSPACE\GitHub\College-Information-System\obj\Debug\net6.0-windows\CollegeInformationSystem.csproj.ResolveComReference.cache

@@ -4,6 +4,7 @@ using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Data;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace CollegeInformationSystem
 {
@@ -96,6 +97,42 @@ namespace CollegeInformationSystem
                 Close();
             }
         }
+
+        public void InsertLog(string actionType, string description)
+        {
+            try
+            {
+                // Open the database connection
+                Open();
+                DateTime currentTime = DateTime.Now;
+                string dateTime = currentTime.ToString("yyyy-MM-dd HH:mm:ss");
+
+                // Construct the SQL command for insertion into the logs table
+                string query = $"INSERT INTO logs (action_type, description, timestamp) VALUES (@ActionType, @Description, '{dateTime}')";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    // Add parameters to the command
+                    cmd.Parameters.AddWithValue("@ActionType", actionType);
+                    cmd.Parameters.AddWithValue("@Description", description);
+                    
+
+                    // Execute the query
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions (e.g., log or display error message)
+                MessageBox.Show("Error occurred while logging: " + ex.Message);
+            }
+            finally
+            {
+                // Close the database connection
+                Close();
+            }
+        }
+
 
         public void UpdateData2(string tableName, string[] columnNames, string[] values, string conditionColumn, string conditionValue)
         {
@@ -323,6 +360,50 @@ namespace CollegeInformationSystem
                 Close();
             }
         }
+
+        public void PopulateChartFromQuery(string query, string chartSeriesName, string xValueField, string yValueField, Chart chart1)
+        {
+            chart1.Series.Clear();
+
+            try
+            {
+                Open();
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    // Open connection and execute the query
+                    Open();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        // Loop through the query result
+                        while (reader.Read())
+                        {
+                            // Extract data from the reader
+                            string department = reader[xValueField].ToString();
+                            int numberOfStudents = Convert.ToInt32(reader[yValueField]);
+
+                            // Create a new series for each department
+                            Series series = new Series(department);
+                            series.Points.AddXY(department, numberOfStudents);
+                            series.ChartType = SeriesChartType.Column;
+
+                            // Add the series to the chart
+                            chart1.Series.Add(series);
+                        }
+                    }
+                }
+                chart1.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            finally
+            {
+                Close();
+            }
+
+        }
+
 
         public void LoadDataIntoComboBox(string query, ComboBox comboBox, string idColumn)
         {

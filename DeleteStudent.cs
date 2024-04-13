@@ -39,8 +39,23 @@ namespace CollegeInformationSystem
 
             try
             {
+                string primaryColumn = "student_id";
+                string tableName = "student";
+                string fnameInput = databaseConnection.GetData2(tableName, "student_fname", id, primaryColumn);
+                string lnameInput = databaseConnection.GetData2(tableName, "student_lname", id, primaryColumn);
+                string campusSelected = databaseConnection.GetData2(tableName, "campus_id", id, primaryColumn);
+                string departmentSelected = databaseConnection.GetData2(tableName, "department_id", id, primaryColumn);
+                string courseSelected = databaseConnection.GetData2(tableName, "course_id", id, primaryColumn);
+                string gwa = databaseConnection.GetData2(tableName, "student_gwa", id, primaryColumn);
+
+                string actionType = "Delete a Student";
+                string description = $"Student record deleted: {fnameInput} {lnameInput} Campus: {campusSelected} Department: {departmentSelected} Course: {courseSelected} GWA: {gwa}";
+
+                databaseConnection.InsertLog(actionType, description);
+
                 databaseConnection.DeleteData("student", "student_id", id);
                 MessageBox.Show("Deleted Successfully!");
+
                 Dashboard dashboard = new Dashboard();
 
                 this.Hide();
@@ -66,5 +81,6 @@ namespace CollegeInformationSystem
 
             this.Close();
         }
+
     }
 }
